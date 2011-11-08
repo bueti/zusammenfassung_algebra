@@ -1,0 +1,274 @@
+\documentclass[a4paper,DIV10,12pt,headsepline,smallheadings,halfparskip-]{scrreprt}
+\pagestyle{headings}
+% Eine gute Codierung
+\usepackage[utf8]{inputenc}
+% Schriftart mit Umlauten
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% Mathematische Zeichen
+\usepackage{amsfonts}   
+\usepackage{amssymb}
+\usepackage{amsmath}
+\DeclareFontFamily{U}{MnSymbolC}{}
+\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+    <-6>  MnSymbolC5
+   <6-7>  MnSymbolC6
+   <7-8>  MnSymbolC7
+   <8-9>  MnSymbolC8
+   <9-10> MnSymbolC9
+  <10-12> MnSymbolC10
+  <12->   MnSymbolC12%
+}{}
+\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+% Deutsche Beschriftung und Silbentrennung
+\usepackage[ngerman]{babel}
+% Für schöne Tabellen
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+% Um Grafiken zu laden
+\usepackage{graphicx}
+\usepackage{float}
+% Klickbare Indexes und Kosmetik
+\usepackage{color}
+\definecolor{black}{gray}{0} % 10% gray
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
+% Untersrecihungen
+\usepackage[normalem]{ulem}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+% Dokument Infos
+\title{Zusammenfassung Algebra I}
+\author{Benjamin Bütikofer}
+
+% Begin des eigentlichen Dokuments
+\begin{document}
+	\maketitle
+	\tableofcontents
+
+	\chapter{Aussagen, Junktoren und Quantoren}
+	\section{Aussagen}
+	\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.6\textwidth}|}
+		\hline
+		Die Person X hat Übergewicht & Aussageform & Es kommen eine oder mehrere Variablen frei vor. \\
+		\hline
+		Esel haben lange Ohren & Aussage (wahr) & Es kann einen Wahrheitswert (wahr/falsch) zugeordnet werden. \\
+		\hline
+	\end{longtable}
+
+	\section{Junktoren}
+	\begin{longtable}{|l|l|l|}
+		\hline
+		\(=:\) & ist definiert als & nix \\
+		\hline
+		\(\neg A\) & \textbf{nicht} A & ist genau dann wahr, wenn A falsch ist \\
+		\hline
+		\( A \wedge B \) & A \textbf{und} B & Ist genau dann wahr, wann A und B wahr sind \\
+		\hline
+		%\(A \vee B \) & A \textbf{oder} B & Ist genau dann wahr, wann A oder B oder beide wahr sind \\ 
+		%\hline
+		\( A \Rightarrow B \) & A \textbf{impliziert} B & Ist genau dann wahr, wenn \(\neg A \vee B \) wahr ist \\
+		\hline
+		\( A \Leftrightarrow B \) & A ist \textbf{äquivalent} mit B & \(A \Rightarrow B \) und \(B \Rightarrow A \) ist wahr \\
+		\hline
+	\end{longtable}
+
+	\subsection{Regeln von De Morgan}
+	\( \neg (A \wedge B) \Leftrightarrow \neg A \vee \neg B\) und \(\neg (A \vee B) \Leftrightarrow \neg A \wedge \neg B \)
+
+	\section{Quantoren}
+	\begin{longtable}{|p{0.2\textwidth}|p{0.8\textwidth}|}
+		\hline
+		\( \forall A(x) \) & Für alle x gilt, sie haben die Eigenschaft A \\
+		\hline
+		\( \forall \in K A(x) \) & Für alle x aus K gilt, sie haben die Eigenschaft A \\
+		\hline
+		\( \exists A(x) \) & Es gibt (min.) ein x mit der Eigenschaft A \\
+		\hline
+		\( \exists \in K A(x) \) & Es gibt (min.) ein x aus K welches die Eigenschaft A besitzt. \\
+		\hline
+	\end{longtable}
+	\pagebreak
+
+	\subsection{Vertauschungsregeln}
+	\begin{longtable}{|p{0.4\textwidth}|p{0.6\textwidth}|}
+		\hline
+		unbeschränkte Quantoren & \( \forall x A(x) \Leftrightarrow \neg \exists x \neg A(x) \)\\
+		\hline
+		beschränkte Quantoren & \( \forall x \in K A(x) \Leftrightarrow \neg \exists x \in K \neg A(x) \)\\
+		\hline
+		unbeschränkte Quantoren & \( \forall x \in K A(x) \Leftrightarrow \forall x (x \in K \Rightarrow A(x) \)\\
+		\hline
+		unbeschränkte Quantoren & \( \exists x \in K A(x) \Leftrightarrow \exists x (x \in K \wedge A(x)) \)\\
+		\hline
+	\end{longtable}
+	\subsection{Wichtige formale Ausdrücke}
+	\begin{longtable}{p{0.5\textwidth}|p{0.5\textwidth}}
+		Alle geraden Zahlen & \( \exists_y \in \mathbb{N}: 2y = x \)\\
+		\hline
+		Alle ungeraden Zahlen & \( \forall_y \in \mathbb{N}: 2y \neq x \)\\
+		\hline
+		Es gibt eine nat. Zahl > 5 & \(\exists_x \in \mathbb{N}: x > 5 \)\\
+		\hline
+		Es gibt unendlich viele n & \(\forall_x \in \mathbb{N}: (\exists_y \in \mathbb{N}: (x < y)) \)\\
+		\hline
+		Jede Zahl > 5 erfüllt die Eigenschaft E(x) & \(\forall_x (x > 5 \Rightarrow E(x)) \)\\
+		\hline
+		Es gibt genau ein n mit der Eigenschaft E(x) & \(\exists_x E(x) \wedge \forall_{x,y} (E(x) \wedge E(y) \Rightarrow x= y)\) \\
+		\hline
+		\(x = y\) & \(\forall_z(z \in X \Leftrightarrow z \in Y) \) \\
+		\(x = y\) & \(x \subset y) \wedge (y \subset x)\) \\
+		\hline
+		\(x \subset y\) & \(\forall_z(z \in X \Rightarrow z \in Y) \) \\
+	\end{longtable}
+
+	\chapter{Mengen}
+	\section{Allgemein}
+	Eine Menge ist die Zusammenfassung von (mathematischen) Objekten zu einem neuen Ganzen, welches für sich selbst genommen wieder ein mathematisches Objekt darstellt. Weiter gelte das \emph{Prinzip der extensionalen Gleichheit}, welches wie folgt lautet:
+	\par \hspace*{10mm} \emph{Zwei Mengen sind genau dann gleich, wenn sie dieselben Elemente enthalten.}
+
+	\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.5\textwidth}|}
+		\hline
+		\( A \in B \) & A ist Element von B & \\
+		\hline
+		\( A \subset B \) & A ist Teilmenge von B & Jedes Element von A kommt in B vor \\
+		\hline
+		\( A \subseteq B \) & echte Teilmenge & Wenn \(A \subset B \) und \(A \neq B \) ist \\
+		\hline
+		\( A \cap B \) & Schnittmenge & Alle Elemente die zu A sowie zu B gehören \\
+		\hline
+		\( A \cup B \) & Vereinigungsmenge & Alle Elemente die zu A oder zu B oder zu beiden gehören \\
+		\hline
+		\( A \setminus B \) & Differenzmenge & Alle Elemente die zu A aber nicht zu B gehören \\
+		\hline
+		\( \emptyset \) & Leeremenge & \\
+		\hline
+		\( \powerset(A) \) & Potenzmenge & \( \powerset(A) := \{x|x \subset A\} \) \\
+		\hline
+	\end{longtable}
+
+	\section{Mengenbildung}
+	\subsection{Leeremenge}
+	Die Leeremenge ist Teilmenge von jeder Menge da jedes Element der Leermenge Teil jeder Menge ist.
+	\subsection{Vereinigung}
+	Ist A eine Menge von Mengen, dann definieren wir die \emph{Vereinigung} \( \bigcup A\) von A als die Menge, welche alle Dinge enthält die ein Element eines Elementes von A sind.
+	\par \hspace*{10mm} \( x \in \cup A \Leftrightarrow \exists Y \in A(x \in Y) \).
+	\newline A ist eine Menge von Mengen: \newline
+	\hspace*{10mm}\( \cup A = \{x | \forall_X \in A (x \in X)\}\) \newline
+	\hspace*{10mm}\( \cup \{A, B, C\} = A \cup B \cup C = \{x|x \in A \vee x \in B \vee x \in C\}\) \newline
+	\hspace*{10mm}\( X \cup Y = \{ x | x \in Y \vee x \in X \}\)
+	\subsection{Schnittmenge}
+	Ist A eine nicht leere Menge von Mengen, dann definieren wir die Schnittmenge \(\bigcap A\) von A, als die Menge die alle Dinge enthält, die ein Element von jedem Element von A sind.
+	\par \hspace*{10mm} \( x \in \cap A \Leftrightarrow \forall Y \in A(x \in Y) \).
+	\subsection{Potenzmenge}
+	die Potenzmenge von A ist die Menge aller Teilmengen inkl. der Leerenmenge von A. \newline
+	\( \powerset(\emptyset) = \{\emptyset\} \neq \emptyset \) \newline
+	\( \powerset(\{0, 1\}) = \{\emptyset, \{0\}, \{1\}, \{0,1\}\} \)
+
+	\chapter{Relationen und Funktionen}
+	\section{Begriffe}
+	\subsection{Tupel}
+	Ein Tupel ist ein primitives Objekt. Zwei Tupel sind genau dann identisch wenn in beiden Tupeln das gleiche steht:
+	\textbf{Beispiel:} Die geordneten Paare \( (x,y) \) und \( (y,z) \) sind genau dann gleich wenn \( x = y = z \)	gilt.
+	\subsection{Kartesisches Produkt}
+	Das Kreuzprodukt zweier Mengen: A = {0,1,2}, B = {s,t}. AxB = { (0,s), (0,t), (1,s), (1,t), (2,s), (2,t) }. Das Kreuzprodukt  zweier Mengen ist wieder eine Menge und zwar eine Menge aus allen Kombinationsmöglichkeiten von Elementen aus der ersten Menge und der zweiten Menge in Tupelschreibweise geschrieben. Kann auch in einer Matrix geschrieben werden.
+	\section{Relationen}
+	\subsection{Definition}
+	Seien A und B zwei Mengen. Die Teilmenge R des Kreuzprodukts AxB heisst Relation zwischen A und B.
+	\(R \subset A \times B\).\newline
+	Eine Relation \(R \subset A \times A\) heisst Relation auf A. Sind \(A \) und \( B \) beliebige Mengen, so nennen wir eine Teilmenge \(R \subset A \times B. \) eine \emph{Relation} zwischen \emph{A} und \emph{B}. Sind \(a \in A \) und \(b \in B \), so sagen wir, dass \emph{a} in Relation \emph{R} zu \emph{b} steht falls \( (a, b) \in R \) ist. Steht \emph{a} in Relation \emph{R} zu \emph{b} so schreiben wir auch \emph{aRb} oder \(a \sim_R b \).
+
+	\subsection{Reflexiv}
+	\( \forall_a A(a): a \sim a \in R \). Jedes Element aus A steht zu sich selbst in Relation.
+	\begin{itemize}
+		\item Die Kleiner-Gleich-Relation auf den reellen Zahlen ist reflexiv, da stets \(x \leq x \) gilt. Sie ist darüber hinaus eine Totalordnung. Gleiches gilt für die Relation \( \geq \).
+		\item Die gewöhnliche Gleichheit auf den reellen Zahlen ist reflexiv, da stets \(x = x\) gilt. Sie ist darüber hinaus eine Äquivalenzrelation.
+		\item Die Teilmengenbeziehung \(\subseteq \) zwischen Mengen ist reflexiv, da stets \(A \subseteq A\) gilt. Sie ist darüber hinaus eine Halbordnung.
+	\end{itemize}
+        Um Reflexivität zu beweisen, ein Element auswählen und die Relation
+        auf's erste Element anwenden. Wenn die Aussage wahr ist, steht das
+        Element mit sich selbst in Beziehung.
+
+	\subsection{Symmetrisch}
+	\( \forall_{a,b} A: a \sim b \Rightarrow b \sim a \in R \Rightarrow (b,a) \in R \) \newline
+	Für alle \(a,b\) von A gilt wenn a zu b in Relation steht, dann steht auch b zu a in Relation. \newline
+	Wenn Person a in der selben Reihe sitzt wie Person b, sitzt Person b auch in der selben Reihe wie Person a.
+	\textbf{Beispiel:} \( R = \{(0,1),(0,0),(2,1),(1,0),(1,2) \} \)
+        \newline Gleichheit, Ungleichheit.
+		=> Wenn die Relation umgekehrt werden kann und sie immer noch gilt.
+		
+	\subsection{Asymmetrisch}
+	\( \forall_{a,b} A: a \sim b \Rightarrow \neg (b \sim a) \). Für alle
+        \(a,b\) aus A gilt: a ist symmetrisch zu b aber b ist nicht symmetrisch zu a.
+        Wenn A \textbf{grösser als} B ist, ist B \textbf{nicht grösser als} A. Eine Asymmetrie
+        ist immer auch Antisymmetrisch, da die Voraussetzung falsch ist
+        (Implikation).
+
+	\subsection{Antisymmetrisch}
+	\(\forall_{a,b} A: a \sim b \wedge b \sim a \Rightarrow a = b \). Wenn a zu b in Relation steht und b zu a, dann ist a = b.\newline
+	\textbf{Beispiel:} Wenn a Vorfahre von b ist und b Vorfahre von a, dann
+        sind a und b die gleiche Person.\newline
+        \(\leq\),\(\geq\) sowie die Teilbarkeitsrelation \(x | y\)
+
+	\subsection{Transitiv}
+	\( \forall_{a,b,c} A: a \sim b \wedge b \sim c \Rightarrow a \sim c \).
+        Wenn a in Relation zu b steht und b in Relation zu c, dann steht auch a
+        zu c in Relation.\newline
+        \textbf{Beispiel:} \(<,>,=,\subset, A \Rightarrow B und B \Rightarrow
+        C, = A \Rightarrow C\)\newline
+        \( R = \{(a,b),(b,a) \}\) = nicht transitiv! \newline
+        \( R = \{(a,b),(b,a),(a,a),(b,b) \}\) = transitiv!
+
+	\subsection{Äquivalenzrelation}
+	Eine Relation die reflexiv, symmetrisch und transitiv ist, heisst
+        Äquivalenzrelation.\newline
+        Eine Äquivalenzklasse sind die disjunkten Mengen der Äquivalenzrelation, also alle Mengen, die zwar die gleiche Eigenschaft haben, ansonsten aber nichts miteinander gemeinsam haben (zb. alle binären Zahlen mit der gleichen Anzahl der Ziffer 1).
+
+	\subsection{Halbordnung}
+	Die Relation R wird als Halbordnung bezeichnet, falls sie transitiv,
+        reflexiv sowie antisymmetrisch ist.\newline
+        \(A \subset B\): Bei zwei Mengen, muss nicht zwingenderweise eine Menge
+        eine Teilmenge der anderen sein.
+	
+	\subsection{Totalordnung}
+	Gilt zusätzlich zur \emph{Halbordnung} noch für alle \(a,b \in A\)
+        stets \(a \sim b \vee b \sim a\) so ist R eine \emph{Ordnung} auf A. =>
+        transitiv, irreflexiv und antisymmetrisch.
+        
+	\section{Funktionen}
+    \subsection{Allgemein}
+        Eindeutige zweiteillige Relationen. Eine beliebige Teilmenge \(f
+        \subset X \times Y \), \(f: x \rightarrow y \).\newline
+        \begin{itemize}
+          \item Domain: A, \(f(x)\), dom, Urbild, Definitionsbereich
+          \item Image: B, y, Im(...), Bild, Zielmenge, Wertebereich
+        \end{itemize}
+
+	\subsection{Injektiv}
+	Injektivität oder \textbf{Linkseindeutigkeit} besagt, dass jedes
+        Element der Zielmenge \textbf{höchstens} einmal als Funktionswert angenommen
+        wird. Kein Wert der Zielmenge wird mehrfach angenommen. Dabei darf die Bildmenge kleiner als die Zielmenge sein.\newline
+	\( \forall_{x,y} \in dom(F): (F(x) = F(y) \Rightarrow x = y) \)
+	
+	\subsection{Surjektiv}
+	Surjektivität oder \textbf{Rechtstotalität} bedeutet, dass jedes
+        Element der Zielmenge mindestens einmal als Funktionswert angenommen
+        wird, also mindestens ein Urbild hat. Jedes Element von Y wird
+        angenommen.
+	\(F: x \rightarrow y\) \newline
+	\(F: \mathbb{N} \Rightarrow \mathbb{N}: F(n) = n^2 \) injektiv, nicht surjektiv\newline
+	\(G: \mathbb{R} \Rightarrow \mathbb{R}: G(x) = x^2 \) nicht injektiv, nicht surjektiv\newline
+	
+	\subsection{Bijektiv}
+	Eine Funktion ist bijektiv (oder \emph{umkehrbar eindeutig auf} oder
+        \emph{eineindeutig auf})), wenn sie sowohl injektiv (kein Wert der
+        Zielmenge wird mehrfach angenommen) als auch surjektiv (jeder Wert der
+        Zielmenge wird angenommen) ist. Insgesamt heißt das, es findet eine
+        vollständige Paarbildung zwischen den Elementen von Definitionsmenge
+        und Zielmenge statt. Nur Bijektionen behandeln ihren Definitionsbereich
+        und ihren Wertebereich symmetrisch, sodass eine bijektive Funktion
+        immer eine Umkehrfunktion hat bzw. invertierbar ist. "Für jedes A gibt
+        es ein B".
+
+\end{document}
