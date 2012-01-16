@@ -1,0 +1,28 @@
+% Zeilenabstand 1,5 Zeilen -----------------------------------------------------
+\onehalfspacing
+
+% Seitenränder -----------------------------------------------------------------
+\setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
+\geometry{paper=a4paper,left=35mm,right=35mm,top=30mm}
+
+% Kopf- und Fußzeilen ----------------------------------------------------------
+\pagestyle{scrheadings}
+% Kopf- und Fußzeile auch auf Kapitelanfangsseiten
+\renewcommand*{\chapterpagestyle}{scrheadings} 
+% Schriftform der Kopfzeile
+\renewcommand{\headfont}{\normalfont}
+
+% Fußzeile
+%\ifoot{\copyright\ \autor}
+\cfoot{}
+\ofoot{\pagemark}
+
+% sonstige typographische Einstellungen ----------------------------------------
+
+% erzeugt ein wenig mehr Platz hinter einem Punkt
+\frenchspacing 
+
+% Schusterjungen und Hurenkinder vermeiden
+\clubpenalty = 10000
+\widowpenalty = 10000 
+\displaywidowpenalty = 10000

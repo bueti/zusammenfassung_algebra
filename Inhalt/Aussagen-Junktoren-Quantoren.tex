@@ -1,0 +1,75 @@
+\chapter{Aussagen, Junktoren und Quantoren}
+\section{Aussagen}
+\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.6\textwidth}|}
+	\hline
+	Die Person X hat Übergewicht & Aussageform & Es kommen eine oder mehrere Variablen frei vor. \\
+	\hline
+	Esel haben lange Ohren & Aussage (wahr) & Es kann einen Wahrheitswert (wahr/falsch) zugeordnet werden. \\
+	\hline
+\end{longtable}
+
+\section{Junktoren}
+\begin{longtable}{|l|l|l|}
+	\hline
+	\(=:\) & ist definiert als & nix \\
+	\hline
+	\(\neg A\) & \textbf{nicht} A & ist genau dann wahr, wenn A falsch ist \\
+	\hline
+	\( A \wedge B \) & A \textbf{und} B & Ist genau dann wahr, wann A und B wahr sind \\
+	\hline
+	%\(A \vee B \) & A \textbf{oder} B & Ist genau dann wahr, wann A oder B oder beide wahr sind \\ 
+	%\hline
+	\( A \Rightarrow B \) & A \textbf{impliziert} B & Ist genau dann wahr, wenn \(\neg A \vee B \) wahr ist \\
+	\hline
+	\( A \Leftrightarrow B \) & A ist \textbf{äquivalent} mit B & \(A \Rightarrow B \) und \(B \Rightarrow A \) ist wahr \\
+	\hline
+\end{longtable}
+
+\subsection{Regeln von De Morgan}
+\( \neg (A \wedge B) \Leftrightarrow \neg A \vee \neg B\) und \(\neg (A \vee B) \Leftrightarrow \neg A \wedge \neg B \)
+
+\section{Quantoren}
+\begin{longtable}{|p{0.2\textwidth}|p{0.8\textwidth}|}
+	\hline
+	\( \forall A(x) \) & Für alle x gilt, sie haben die Eigenschaft A \\
+	\hline
+	\( \forall \in K A(x) \) & Für alle x aus K gilt, sie haben die Eigenschaft A \\
+	\hline
+	\( \exists A(x) \) & Es gibt (min.) ein x mit der Eigenschaft A \\
+	\hline
+	\( \exists \in K A(x) \) & Es gibt (min.) ein x aus K welches die Eigenschaft A besitzt. \\
+	\hline
+\end{longtable}
+\pagebreak
+
+\subsection{Vertauschungsregeln}
+\begin{longtable}{|p{0.4\textwidth}|p{0.6\textwidth}|}
+	\hline
+	unbeschränkte Quantoren & \( \forall x A(x) \Leftrightarrow \neg \exists x \neg A(x) \)\\
+	\hline
+	beschränkte Quantoren & \( \forall x \in K A(x) \Leftrightarrow \neg \exists x \in K \neg A(x) \)\\
+	\hline
+	unbeschränkte Quantoren & \( \forall x \in K A(x) \Leftrightarrow \forall x (x \in K \Rightarrow A(x) \)\\
+	\hline
+	unbeschränkte Quantoren & \( \exists x \in K A(x) \Leftrightarrow \exists x (x \in K \wedge A(x)) \)\\
+	\hline
+\end{longtable}
+\subsection{Wichtige formale Ausdrücke}
+\begin{longtable}{p{0.5\textwidth}|p{0.5\textwidth}}
+	Alle geraden Zahlen & \( \exists_y \in \mathbb{N}: 2y = x \)\\
+	\hline
+	Alle ungeraden Zahlen & \( \forall_y \in \mathbb{N}: 2y \neq x \)\\
+	\hline
+	Es gibt eine nat. Zahl > 5 & \(\exists_x \in \mathbb{N}: x > 5 \)\\
+	\hline
+	Es gibt unendlich viele n & \(\forall_x \in \mathbb{N}: (\exists_y \in \mathbb{N}: (x < y)) \)\\
+	\hline
+	Jede Zahl > 5 erfüllt die Eigenschaft E(x) & \(\forall_x (x > 5 \Rightarrow E(x)) \)\\
+	\hline
+	Es gibt genau ein n mit der Eigenschaft E(x) & \(\exists_x E(x) \wedge \forall_{x,y} (E(x) \wedge E(y) \Rightarrow x= y)\) \\
+	\hline
+	\(x = y\) & \(\forall_z(z \in X \Leftrightarrow z \in Y) \) \\
+	\(x = y\) & \(x \subset y) \wedge (y \subset x)\) \\
+	\hline
+	\(x \subset y\) & \(\forall_z(z \in X \Rightarrow z \in Y) \) \\
+\end{longtable}

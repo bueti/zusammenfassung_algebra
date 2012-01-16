@@ -1,0 +1,49 @@
+% Eine gute Codierung
+\usepackage[utf8]{inputenc}
+% Schriftart mit Umlauten
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{relsize} % Schriftgröße relativ festlegen
+% Deutsche Beschriftung und Silbentrennung
+\usepackage[ngerman]{babel}
+% Für schöne Tabellen
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+% Um Grafiken zu laden
+\usepackage{graphicx}
+\usepackage{float}
+% Klickbare Indexes und Kosmetik
+\usepackage{color}
+\definecolor{black}{gray}{0} % 10% gray
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
+% Untersrecihungen
+\usepackage[normalem]{ulem}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{1}
+% Mathe
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}   
+\usepackage{amssymb}
+\DeclareFontFamily{U}{MnSymbolC}{}
+\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+    <-6>  MnSymbolC5
+   <6-7>  MnSymbolC6
+   <7-8>  MnSymbolC7
+   <8-9>  MnSymbolC8
+   <9-10> MnSymbolC9
+  <10-12> MnSymbolC10
+  <12->   MnSymbolC12%
+}{}
+\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+% Anpassung Seitenlayout
+\usepackage[
+    automark, % Kapitelangaben in Kopfzeile automatisch erstellen
+    headsepline, % Trennlinie unter Kopfzeile
+    ilines % Trennlinie linksbündig ausrichten
+]{scrpage2}
+% Einfache Definition der Zeilenabstände und Seitenränder etc. -----------------
+\usepackage{setspace}
+\usepackage{geometry}

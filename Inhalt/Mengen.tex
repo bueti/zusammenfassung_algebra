@@ -1,0 +1,42 @@
+\chapter{Mengen}
+\section{Allgemein}
+Eine Menge ist die Zusammenfassung von (mathematischen) Objekten zu einem neuen Ganzen, welches für sich selbst genommen wieder ein mathematisches Objekt darstellt. Weiter gelte das \emph{Prinzip der extensionalen Gleichheit}, welches wie folgt lautet:
+\par \hspace*{10mm} \emph{Zwei Mengen sind genau dann gleich, wenn sie dieselben Elemente enthalten.}
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|p{0.5\textwidth}|}
+	\hline
+	\( A \in B \) & A ist Element von B & \\
+	\hline
+	\( A \subset B \) & A ist Teilmenge von B & Jedes Element von A kommt in B vor \\
+	\hline
+	\( A \subseteq B \) & echte Teilmenge & Wenn \(A \subset B \) und \(A \neq B \) ist \\
+	\hline
+	\( A \cap B \) & Schnittmenge & Alle Elemente die zu A sowie zu B gehören \\
+	\hline
+	\( A \cup B \) & Vereinigungsmenge & Alle Elemente die zu A oder zu B oder zu beiden gehören \\
+	\hline
+	\( A \setminus B \) & Differenzmenge & Alle Elemente die zu A aber nicht zu B gehören \\
+	\hline
+	\( \emptyset \) & Leeremenge & \\
+	\hline
+	\( \powerset(A) \) & Potenzmenge & \( \powerset(A) := \{x|x \subset A\} \) \\
+	\hline
+\end{longtable}
+
+\section{Mengenbildung}
+\subsection{Leeremenge}
+Die Leeremenge ist Teilmenge von jeder Menge da jedes Element der Leermenge Teil jeder Menge ist.
+\subsection{Vereinigung}
+Ist A eine Menge von Mengen, dann definieren wir die \emph{Vereinigung} \( \bigcup A\) von A als die Menge, welche alle Dinge enthält die ein Element eines Elementes von A sind.
+\par \hspace*{10mm} \( x \in \cup A \Leftrightarrow \exists Y \in A(x \in Y) \).
+\newline A ist eine Menge von Mengen: \newline
+\hspace*{10mm}\( \cup A = \{x | \forall_X \in A (x \in X)\}\) \newline
+\hspace*{10mm}\( \cup \{A, B, C\} = A \cup B \cup C = \{x|x \in A \vee x \in B \vee x \in C\}\) \newline
+\hspace*{10mm}\( X \cup Y = \{ x | x \in Y \vee x \in X \}\)
+\subsection{Schnittmenge}
+Ist A eine nicht leere Menge von Mengen, dann definieren wir die Schnittmenge \(\bigcap A\) von A, als die Menge die alle Dinge enthält, die ein Element von jedem Element von A sind.
+\par \hspace*{10mm} \( x \in \cap A \Leftrightarrow \forall Y \in A(x \in Y) \).
+\subsection{Potenzmenge}
+die Potenzmenge von A ist die Menge aller Teilmengen inkl. der Leerenmenge von A. \newline
+\( \powerset(\emptyset) = \{\emptyset\} \neq \emptyset \) \newline
+\( \powerset(\{0, 1\}) = \{\emptyset, \{0\}, \{1\}, \{0,1\}\} \)
