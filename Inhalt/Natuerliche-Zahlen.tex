@@ -1,0 +1,53 @@
+\chapter{Natürliche Zahlen} % (fold)
+\label{cha:natürliche_zahlen}
+
+\section{Die grundlegende Struktur der natürlichen Zahlen} % (fold)
+\label{sec:die_grundlegende_struktur_der_natürlichen_zahlen}
+\textbf{Definition:} 
+\begin{enumerate}
+	\item Jede natürliche Zahl \(k\) hat genau einen Nachfolger \(N(k)\).
+	\item 0 ist kein Nachfolger aber alle anderen natürlichen Zahlen sind Nachfolger von genau einer natürlichen Zahl.
+	\item Ist \(X \subset \mathbb{N}\) mit \(0 \in X\) eine Menge von natürlichen Zahlen mit der Eigenschaft, dass für jedes Element \(k\) von \(X\) auch \(N(k)\) zu \(x\) gehört, dann ist \(X = \mathbb{N}\).
+\end{enumerate}
+Die letzte der oben genannten Eigenschaften wird das Prinzip der vollständigen Induktion gennant.
+\subsection{Vollständige Induktion} % (fold)
+\label{sub:vollständige_induktion}
+Zu Beweisen:\[\sum_{i=1}^n i = \frac{n(n+1)}{2} \]
+Induktionsverankerung
+\begin{align*}
+	\text{für n=1: } \sum_{i=1}^1 i = 1 = \frac{2}{2} = \frac{1\cdot2}{2} = \frac{1(1+1)}{2}
+\end{align*}
+Induktionsschritt: Für \(n \rightarrow n+1\) \newline
+Induktionsannahme:
+\[ \sum_{i=1}^{n+1} i = \frac{(n+1)((n+1)+1)}{2} \]
+\begin{align*}
+	\sum_{i=1}^{n+1} i &= \sum_{i=1}^{n} i + (n+1) \\
+	&=^{iA} \frac{n(n+1)}{2} + (k+1) \\
+	&= \frac{n(n+1)}{2} +  \frac{2n(n+1)}{2} \\
+	&= \frac{n(n+1)+2(n+1)}{2} \\
+	&= \frac{(k+1)(k+2)}{2} \\
+	\sum_{i=1}^{n+1} i &= \frac{(n+1)((n+1)+1)}{2}
+\end{align*}
+% subsection vollständige_induktion (end)
+% section die_grundlegende_struktur_der_natürlichen_zahlen (end)
+
+\section{Rekursive Definitionen} % (fold)
+\label{sec:rekursive_definitionen}
+Ist \(M\) eine beliebige Menge und \(g: M \rightarrow M\) sowie \(c \in M\), dann gibt es eine eindeutig bestimmte Funktion \(f: \mathbb{N} \rightarrow M\) welche die Gleichungen
+\begin{align*}
+	f(0) &= c \\
+	f(k+1) &= f(g(k))
+\end{align*}
+erfüllt.
+% section rekursive_definitionen (end)
+
+\section{Die algebraische Struktur der natürlichen Zahlen} % (fold)
+\label{sec:die_algebraische_struktur_der_natürlichen_zahlen}
+Siehe Skript...
+% section die_algebraische_struktur_der_natürlichen_zahlen (end)
+
+\section{Ordnungstheoretische Struktur der natürlichen Zahlen} % (fold)
+\label{sec:ordnungstheoretische_struktur_der_natürlichen_zahlen}
+Nicht wichtig, siehe Skript
+% section ordnungstheoretische_struktur_der_natürlichen_zahlen (end)
+% chapter natürliche_zahlen (end)

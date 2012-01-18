@@ -1,6 +1,6 @@
 \chapter{Aussagen, Junktoren und Quantoren}
 \section{Aussagen}
-\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.6\textwidth}|}
+\begin{longtable}{|p{0.4\textwidth}|p{0.2\textwidth}|p{0.4\textwidth}|}
 	\hline
 	Die Person X hat Übergewicht & Aussageform & Es kommen eine oder mehrere Variablen frei vor. \\
 	\hline
@@ -11,7 +11,7 @@
 \section{Junktoren}
 \begin{longtable}{|l|l|l|}
 	\hline
-	\(=:\) & ist definiert als & nix \\
+	\(=:\) & ist definiert als & ~ \\
 	\hline
 	\(\neg A\) & \textbf{nicht} A & ist genau dann wahr, wenn A falsch ist \\
 	\hline
@@ -23,6 +23,15 @@
 	\hline
 	\( A \Leftrightarrow B \) & A ist \textbf{äquivalent} mit B & \(A \Rightarrow B \) und \(B \Rightarrow A \) ist wahr \\
 	\hline
+\end{longtable}
+Wahrheitstabelle zu den Junktoren:
+\begin{longtable}{|c|c||c|c|c|c|}
+	\hline
+	a & b & \(a \wedge b\) & \(a \vee b\) & \(a \Rightarrow b\) & \(a \Leftrightarrow b\) \\ \hline \hline
+	w & w & w & w & w & w \\ \hline
+	w & f & f & w & f & f \\ \hline
+	f & w & f & w & w & f \\ \hline
+	f & f & f & f & w & w \\ \hline
 \end{longtable}
 
 \subsection{Regeln von De Morgan}
@@ -40,7 +49,6 @@
 	\( \exists \in K A(x) \) & Es gibt (min.) ein x aus K welches die Eigenschaft A besitzt. \\
 	\hline
 \end{longtable}
-\pagebreak
 
 \subsection{Vertauschungsregeln}
 \begin{longtable}{|p{0.4\textwidth}|p{0.6\textwidth}|}

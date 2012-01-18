@@ -1,0 +1,83 @@
+\chapter{Algorithmen} % (fold)
+\label{cha:algorithmen}
+\section{Grösster gemeinsamer Teiler} % (fold)
+\label{sec:ggt}
+Algorithmus zur ggT Berechnung (Pseudo Code):
+\begin{lstlisting}
+ggt(m,n) {
+  if (n==0)
+    return m;
+  else
+    return ggt(n, m%n);
+}
+\end{lstlisting}
+% section ggt (end)
+
+\section{Kleinstes gemeinsames Vielfaches} % (fold)
+\label{sec:kleinstes_gemeinsames_vielfaches}
+\begin{lstlisting}
+kgv(m,n) {
+    o = ggt(m,n);
+    p = (m * n) / o;
+    return p;
+}
+\end{lstlisting}
+% section kleinstes_gemeinsames_vielfaches (end)
+
+\section{Euklidischer Algorithmus} % (fold)
+\label{sec:euklidischer_algorithmus}
+Beispiel: \(99x \cdot 78y = ggt(99,78)\)
+\begin{align*}
+99 &= 1 \cdot 78 + 21 && \\
+78 &= 3 \cdot 21 + 15 &&\\
+21 &= 1 \cdot 15 + 6 &&\\
+15 &= 2 \cdot 6 + 3 &&\\
+ 6 &= 2 \cdot 3 + 0 &&
+\end{align*}
+\(3\) ist ein Teiler von 6 und damit der gesuchte grösste gemeinsame Teiler von 99 und 78.
+Nun kann man diese Gleichungen rückwärts lesen und den Rest jeweils als Differenz der beiden anderen Terme darstellen. Setzt man diese Restdarstellungen rekursiv ineinander ein, so ergeben sich verschiedene Darstellungen des letzten Restes 3:
+\begin{align*}
+	3 &= 15 - 2 \cdot 6 \\
+	&= 15 - 2 \cdot (21 - 1 \cdot 15) & &= 3 \cdot 15 - 2 \cdot 21 &\\
+	&= 3\cdot (78 - 3 \cdot 21) - 2 \cdot 21 & &= 3 \cdot 78 - 11 \cdot 21 &\\
+	&= 3 \cdot 78 - 11 \cdot (99-1 \cdot 78) & &= 14 \cdot 78 - 11 \cdot 99 &
+\end{align*}
+Somit ist \(x = -11\) und \(y=14\) die gesuchte Lösung.
+% section euklidischer_algorithmus (end)
+
+\subsection{Primfaktorzerlegung} % (fold)
+\begin{lstlisting}
+pfz(n) {
+  pz=2;
+  if(n % pz) {
+    print(pz)
+    pfz(n/pz)
+  } else {
+    pz = getNextPrime(pz++)
+  }
+}
+\end{lstlisting}
+% subsection primfaktoren (end)
+
+\subsection{Primpotenz finden} % (fold)
+\label{sub:primpotenz_finden}
+Java Code:
+\begin{lstlisting}
+public static boolean isPrimePower(int n) {
+  int nold = n;
+  for (int i = 2; i <= n; i++) {
+    if (isPrime(i)) {
+      while (n % i == 0) {
+        n = n / i;
+        if (n == 1) {
+          return true;
+        }
+      }
+    }
+    n = nold;
+  }
+  return false;
+}
+\end{lstlisting}
+% subsection primpotenz_finden (end)
+% chapter algorithmen (end)

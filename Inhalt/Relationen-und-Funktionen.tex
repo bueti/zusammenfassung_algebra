@@ -67,7 +67,16 @@ Die Relation R wird als Halbordnung bezeichnet, falls sie transitiv,
 Gilt zusätzlich zur \emph{Halbordnung} noch für alle \(a,b \in A\)
     stets \(a \sim b \vee b \sim a\) so ist R eine \emph{Ordnung} auf A. =>
     transitiv, irreflexiv und antisymmetrisch.
-    
+
+\subsection{Beispiele} % (fold)
+\label{sub:beispiele}
+\begin{longtable}{c|l}
+	\(=\) & reflexiv, transitiv, symmetrisch, antisymmetrisch, ist eine Äquivalenzrelation \\ \hline
+	\(\geq,\leq\) & reflexiv, transitiv, antisymmetrisch, ist eine Totalordnung \\ \hline
+	\(<,>\) & asymmetrisch, transitiv, nicht antisymmetrisch, nicht relativ, nicht total
+\end{longtable}
+% subsection beispiele (end)
+	
 \section{Funktionen}
 \subsection{Allgemein}
     Eindeutige zweiteillige Relationen. Eine beliebige Teilmenge \(f
@@ -89,8 +98,9 @@ Surjektivität oder \textbf{Rechtstotalität} bedeutet, dass jedes
     wird, also mindestens ein Urbild hat. Jedes Element von Y wird
     angenommen.
 \(F: x \rightarrow y\) \newline
-\(F: \mathbb{N} \Rightarrow \mathbb{N}: F(n) = n^2 \) injektiv, nicht surjektiv\newline
-\(G: \mathbb{R} \Rightarrow \mathbb{R}: G(x) = x^2 \) nicht injektiv, nicht surjektiv\newline
+\(F: \mathbb{N} \rightarrow \mathbb{N}: F(n) = n^2 \) injektiv, nicht surjektiv\newline
+\(G: \mathbb{R} \rightarrow \mathbb{R}: G(x) = x^2 \) nicht injektiv, nicht surjektiv\newline
+\(F: X \rightarrow Y:\) jedes Element von y wird erreicht auch: \(im(F) =y\)
 
 \subsection{Bijektiv}
 Eine Funktion ist bijektiv (oder \emph{umkehrbar eindeutig auf} oder
@@ -102,3 +112,10 @@ Eine Funktion ist bijektiv (oder \emph{umkehrbar eindeutig auf} oder
     und ihren Wertebereich symmetrisch, sodass eine bijektive Funktion
     immer eine Umkehrfunktion hat bzw. invertierbar ist. "Für jedes A gibt
     es ein B".
+\begin{align*}
+	F \circ G \circ H &= F(G(H(x))) &&\\
+	&= F \circ (G \circ H) &&\\
+	&= (F \circ G) \circ H &&
+\end{align*}
+\(G\circ F: x \rightarrow z\) und \(G \circ F(x):= G(F(X))\).\newline
+\((x,y) \in F = F(x)=y\).

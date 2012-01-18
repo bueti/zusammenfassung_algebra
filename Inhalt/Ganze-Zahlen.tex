@@ -1,0 +1,47 @@
+\chapter{Ganze Zahlen} % (fold)
+\label{cha:ganze_zahlen}
+Seinen \(x,y\) ganze Zahlen. Es gilt \(x < y\) genau dann wenn es eine natürliche Zahl \(n > 0\) mit der Eigenschaft \(x+n=y\) gibt.
+\section{Teilbarkeit} % (fold)
+\label{sec:teilbarkeit}
+Sind \(x,y \in \mathbb{Z}\) ganze Zahlen so sagen wir, dass \emph{x eine Teiler von y} ist falls es ein \(k \in \mathbb{Z}\) gibt mit \(xk = y\). Wir schreiben in diesem Fall \(x|y\). Es gilt also:
+\[ x | y : \Leftrightarrow \exists k \in \mathbb{Z} (y=xk)\]
+Die Teilbarkeitsrelation ist \underline{transitiv}, d. h. wenn für beliebige ganze Zahlen \(x,y,z\) folgt aus \(x|y\) und \(y|z\) stets auch \(x|z\).
+
+\textbf{Definition:} Zwei ganze Zahlen heissen \emph{teilerfremd} wenn \emph{ggT(x,y)}=1 gilt.\newline
+Seien \(x,y \in \mathbb{Z}\) teilerfremd, dann gibt es ganze Zahlen \(k, k'\) so, dass
+\[ 1 = kx + k'y \]
+gilt.
+% section teilbarkeit (end)
+
+\section{Primzahlen} % (fold)
+\label{sec:primzahlen}
+Folgende Aussagen sind für \(p \in \mathbb{N}\) äquivalent:
+\begin{enumerate}
+	\item \( \forall{n,m} \in \mathbb{N} (p|nm \Rightarrow p|n \vee p|m)\) und \(p \neq 1\)
+	\item \( T(p) = \{1,p\}\) und  \(p \neq 1\)
+	\item \(|T(p)| = 2\)
+\end{enumerate}
+Weiter gilt:\newline
+Mit Ausnahme der Zahl 2 sind alle Primzahlen p ungerade.
+
+\subsection{Primfaktorzerlegung} % (fold)
+\label{sub:primfaktorzerlegung}
+Vorgehen: Die gegebene Zahl Modulo die kleinste, noch nicht getestete Primzahl. Falls der Rest 0 ist, weiter mit dem Ergebins, ansonsten die nächst grössere Primzahl verwenden.\newline
+\textbf{Beispiel:} pfz(45)
+\begin{align*}
+	45 \mod 2 &= 1 \rightarrow \text{ Rest ungleich 0, nächste Primzahl } \\
+	45 \mod 3 &= 0 \rightarrow 3 \cdot 15 = 45 \\
+	15 \mod 3 &= 0 \rightarrow 3 \cdot 5 = 15 \\
+	5 \mod 3 &= 2  \rightarrow \text{ Rest ungleich 0, nächste Primzahl } \\
+	5 \mod 5 &= 0 \rightarrow 1 \cdot 5 = 5
+\end{align*}
+Daraus folgt, die Primfaktoren für 45 heissen: \( 3^2 \cdot 5^1 \)\newline
+Um die Anzahl Primfaktoren zu bestimmen wird nur die Anzahl unterschiedlicher Basen gezählt und nicht die Anzahl der Faktoren. \textbf{45 hat demzufolge zwei Primfaktoren!}
+% subsection primfaktorzerlegung (end)
+% section primzahlen (end)
+
+\section{Modulare Arithmetik} % (fold)
+\label{sec:modulare_arihmetik}
+
+% section modulare_arihmetik (end)
+% chapter ganze_zahlen (end)
