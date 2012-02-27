@@ -44,4 +44,23 @@ Um die Anzahl Primfaktoren zu bestimmen wird nur die Anzahl unterschiedlicher Ba
 \label{sec:modulare_arihmetik}
 
 % section modulare_arihmetik (end)
+\subsection{Chinesischer Restsatz}
+Bei mehreren Gleichungen:\\
+1. Teiler bestimmen\\
+2. neue Gleichung aus der Gleichung machen\\
+3. Wieder zu 1.\\
+Beispiel:\\
+\begin{align*}
+	x \equiv_4 3\\
+	x \equiv_5 2\\
+	x \equiv_9 1\\
+	&\Rightarrow [7]_{20} \Rightarrow x \equiv_20 7\\
+	&\Rightarrow [127]_{180}
+\end{align*}
+
+Algorithmus:\\
+$$an_1 + bn_2 =1$$
+$$x := y_1 bn_2 + y_2an_1$$
+
+
 % chapter ganze_zahlen (end)

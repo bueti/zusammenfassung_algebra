@@ -1,2 +1,2 @@
 # Zusammenfassung Algebra
-1. Semester Informatik HSZ-T
+1 und 2. Semester Informatik HSZ-T
