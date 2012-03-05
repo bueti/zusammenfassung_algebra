@@ -1,0 +1,22 @@
+\chapter{Algebraische Strukturen}
+Eine algebraische Struktur ist eine Menge von Mengen (die der Struktur zugrundeliegenden Mengen) die jeweils mit einer oder mehreren (meist binären) Verknüpfung versehen sind.
+\section{Grundstrukturen}
+\subsection{Halbgruppen, Gruppen und Monoide}
+\begin{definition}
+Eine Struktur $(G, \cdot)$ bestehend aus einer Menge $G$ und einer Verknüpfung $\cdot : G \times G \rightarrow G$ heisst:
+\begin{enumerate}
+	\item \textbf{Halbgruppe}, falls $\cdot$ assoziativ d.h. $a \cdot ( b \cdot c) = (a \cdot b) \cdot c$ ist.
+	\item \textbf{Monoid}, falls $(G, \cdot)$ eine Halbgruppe ist und ein neutrales Element $e \in G$ existiert.
+	\item \textbf{Gruppe}, falls $(G, \cdot)$ ein Monoid (mit neutralem Element $e$) ist und für alle $a \in G$ ein $b \in G$ existiert, so dass $a \cdot b = b \cdot a = e$ gilt.
+	\item \textbf{kommutative Gruppe}, falls $(G, \cdot)$ eine Gruppe und $\cdot$ kommutativ ist.
+\end{enumerate}
+\end{definition}
+
+\begin{bem}
+In einer Gruppe $(M, \cdot)$ besitzt jedes Element $a \in G$ ein eindeutig bestimmtes inverses Element (dies kann auch $a$ selbst sein), wir bezeichnen dieses mit $a^{-1}$. Offensichtlich gilt für jedes $a \in G$ auch $(a^{-1})^{-1} = a$.
+\end{bem}
+
+\subsection{Unterstukturen}
+Eine unter $\cdot$ abgeschlossene Teilmenge $\bigcup$ nennen wir Unterstruktur. Für sie gelten die selben Regeln wie für die normalen Strukturen. Folgerung: Jede (Halb-) Gruppe besitzt eine kleinste Unter(halb)gruppe und jeder Monoid besitzt einen kleinsten Untermonoid, die eine gegebene Teilmenge der (Halb-) Gruppe bzw. des Monoids enthalten.
+
+\subsection{Die Morphismen von (Halb-) Gruppen und Monoiden}
