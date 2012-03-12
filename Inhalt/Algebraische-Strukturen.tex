@@ -20,3 +20,51 @@ In einer Gruppe $(M, \cdot)$ besitzt jedes Element $a \in G$ ein eindeutig besti
 Eine unter $\cdot$ abgeschlossene Teilmenge $\bigcup$ nennen wir Unterstruktur. Für sie gelten die selben Regeln wie für die normalen Strukturen. Folgerung: Jede (Halb-) Gruppe besitzt eine kleinste Unter(halb)gruppe und jeder Monoid besitzt einen kleinsten Untermonoid, die eine gegebene Teilmenge der (Halb-) Gruppe bzw. des Monoids enthalten.
 
 \subsection{Die Morphismen von (Halb-) Gruppen und Monoiden}
+
+\subsection{Ringe und Körper}
+\begin{definition}
+Eine Struktur $(R,+,\cdot)$ heisst Ring, wenn folgende Bedingungen erfüllt sind:
+	\begin{enumerate}
+		\item $(R, +)$ ist eine kommutative \footnote{Kommutativ: Reihenfolge egal; $a+b = b+a$} Gruppe
+		\item $(R,\cdot)$ ist eine Halbgruppe
+		\item Es gilt das Distributivgesetz, d. h. für alle Elemente $r,s,t$ des Rings gelten:
+		\begin{enumerate}
+			\item $r \cdot (s+t) = (r \cdot s) + (r \cdot t)$
+			\item $(r+s) \cdot t = (r \cdot t) + (s \cdot t)$
+		\end{enumerate}
+	\end{enumerate}
+\end{definition}
+Die Beweise zu den Rechenregeln sind in den Notizen zu finden.
+\begin{bsp}
+\begin{tabular}{|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Ringe & Keine Ringe \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} $(\mathbb{Z}, +, \cdot)$ & $(\mathbb{N}, +, \cdot)$, da $+$ auf $\mathbb{N}$ nicht kommutativ ist \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex}  $(\mathbb{Z}_{/n}, +, \cdot)$ & \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex}  $(\{0\}, +, \cdot)$ & \\ 
+\hline 
+\end{tabular} 
+\end{bsp}
+
+\subsubsection*{Nullteiler}
+\begin{definition}
+Ein Nullteiler ist eine Zahl, welche nicht 0 ist, und mit einer anderen Zahl multipliziert 0 ergibt.\\
+Es sei $(R, +, \cdot)$ ein Ring
+	\begin{enumerate}
+		\item Ein Element $(r \in R)$ heisst rechter Nullteiler in $R$, falls ein $s \in R\\{0}$ existiert mit $sr = 0$.
+		\item Ein Element $(r \in R)$ heisst linker Nullteiler in $R$, falls ein $s \in R\\{0}$ existiert mit $rs = 0$.
+		\item Ein Element $(r \in R)$ heisst Nullteiler in $R$, falls ein $r$ sowohl linker- als auch rechter Nullteiler in $R$ ist.
+		\item Der Ring $(R, +, \cdot)$ heisst Integritätsring, wenn:
+		\begin{enumerate}
+			\item Die Verknüpfung $\cdot$ kommutativ ist.
+			\item $0 \in R$ ist der einzige Nullteiler in $R$
+		\end{enumerate}
+	\end{enumerate}
+\end{definition}
+\begin{bem}
+In einem Integritätsring $R$ gilt stets $1 \neq 0$. $1=0$ gilt nur in einem Nullring \footnote{$(\{0\}, +, \cdot)$}. Ein Nullring ist jedoch kein Integritätsring, da $0$ kein Nullteiler von $0$ ist.
+\end{bem}
+
