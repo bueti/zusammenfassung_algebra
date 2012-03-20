@@ -20,12 +20,24 @@ In einer Gruppe $(M, \cdot)$ besitzt jedes Element $a \in G$ ein eindeutig besti
 Eine unter $\cdot$ abgeschlossene Teilmenge $\bigcup$ nennen wir Unterstruktur. Für sie gelten die selben Regeln wie für die normalen Strukturen. Folgerung: Jede (Halb-) Gruppe besitzt eine kleinste Unter(halb)gruppe und jeder Monoid besitzt einen kleinsten Untermonoid, die eine gegebene Teilmenge der (Halb-) Gruppe bzw. des Monoids enthalten.
 
 \subsection{Die Morphismen von (Halb-) Gruppen und Monoiden}
+\begin{itemize}
+	\item Ein \textbf{(Halb-) Gruppenhomomorphismus} von der (Halb-) Gruppe $(G, \cdot)$ in die (Halb-) Gruppe $(G', \circ)$ ist eine Abbildung $f: G \rightarrow G'$, so dass für alle $a,b \in G$ 
+	$$f(a \cdot b) = f(a) \circ f(b)$$
+	gilt.
+	\item Ein \textbf{Monoidhomomorphismus} vom Monoid $(M, \cdot)$ in den Monoid $(M', \circ)$ ist eine Abbildung $f: M \rightarrow M'$, so dass für alle $a,b \in M$
+	$$ f(a\cdot b) = f(a) \circ f(b)$$
+	gilt, und ausserdem wird das neutrale Element von $(M, \cdot)$ aus das neutrale Element von $(M', \circ)$ abgebildet.
+\end{itemize}
+Injektive\footnote{Injektiv: Jedes Element in der Abbildung wird nur einmal erreicht} Homomorphismen nennen wir \textbf{Monomorphismen}, surjektive\footnote{Surjektiv: Es gibt Punkte in der Abbildung die mehrmals erreicht werden können} \textbf{Epimorphismen} und bijektive\footnote{Bijektiv: Es findet eine vollständige Paarbildung zwischen der Definitions- und Zielmenge statt} \textbf{Isomorphismen}.
+\begin{bem}
+Nicht jeder Halbgruppenhomomorphismus zwischen Monoiden ist auch ein Monoidhomomorphismus. Des weiteren gilt, dass wenn $f: (G, \cdot) \rightarrow (G', \star) $ und $h: (G', \star) \rightarrow (G'', \bullet) $ Homomorphismen von Gruppen oder Halbgruppen oder Monoiden sind, dann ist auch $h \circ f : (G, \cdot) \rightarrow (G'' \rightarrow \bullet)$ ein entsprechender Homomorphismus.
+\end{bem}
 
 \subsection{Ringe und Körper}
 \begin{definition}
 Eine Struktur $(R,+,\cdot)$ heisst Ring, wenn folgende Bedingungen erfüllt sind:
 	\begin{enumerate}
-		\item $(R, +)$ ist eine kommutative \footnote{Kommutativ: Reihenfolge egal; $a+b = b+a$} Gruppe
+		\item $(R, +)$ ist eine kommutative\footnote{Kommutativ: Reihenfolge egal; $a+b = b+a$} Gruppe
 		\item $(R,\cdot)$ ist eine Halbgruppe
 		\item Es gilt das Distributivgesetz, d. h. für alle Elemente $r,s,t$ des Rings gelten:
 		\begin{enumerate}
