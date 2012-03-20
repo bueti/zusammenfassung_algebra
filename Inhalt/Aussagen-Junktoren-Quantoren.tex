@@ -9,11 +9,11 @@
 \end{longtable}
 
 \section{Junktoren}
-\begin{longtable}{|l|l|l|}
+\begin{tabular}{|l|l|p{8.5cm}|}
 	\hline
 	\(=:\) & ist definiert als & ~ \\
 	\hline
-	\(\neg A\) & \textbf{nicht} A & ist genau dann wahr, wenn A falsch ist \\
+	\(\neg A\) & \textbf{nicht} A & Ist genau dann wahr, wenn A falsch ist \\
 	\hline
 	\( A \wedge B \) & A \textbf{und} B & Ist genau dann wahr, wann A und B wahr sind \\
 	\hline
@@ -23,8 +23,10 @@
 	\hline
 	\( A \Leftrightarrow B \) & A ist \textbf{äquivalent} mit B & \(A \Rightarrow B \) und \(B \Rightarrow A \) ist wahr \\
 	\hline
-\end{longtable}
-Wahrheitstabelle zu den Junktoren:
+\end{tabular}
+
+
+\begin{table}[h]
 \begin{longtable}{|c|c||c|c|c|c|}
 	\hline
 	a & b & \(a \wedge b\) & \(a \vee b\) & \(a \Rightarrow b\) & \(a \Leftrightarrow b\) \\ \hline \hline
@@ -33,6 +35,8 @@ Wahrheitstabelle zu den Junktoren:
 	f & w & f & w & w & f \\ \hline
 	f & f & f & f & w & w \\ \hline
 \end{longtable}
+\caption{Wahrheitstabelle zu den Junktoren}
+\end{table}
 
 \subsection{Regeln von De Morgan}
 \( \neg (A \wedge B) \Leftrightarrow \neg A \vee \neg B\) und \(\neg (A \vee B) \Leftrightarrow \neg A \wedge \neg B \)
