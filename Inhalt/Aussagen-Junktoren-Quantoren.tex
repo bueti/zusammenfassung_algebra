@@ -38,8 +38,15 @@
 \caption{Wahrheitstabelle zu den Junktoren}
 \end{table}
 
-\subsection{Regeln von De Morgan}
-\( \neg (A \wedge B) \Leftrightarrow \neg A \vee \neg B\) und \(\neg (A \vee B) \Leftrightarrow \neg A \wedge \neg B \)
+\subsection{Gültige Äquivalenzen}
+\begin{enumerate}
+	\item Doppelte Negation: $\neg\neg A \Leftrightarrow A$
+	\item Kommutativität: $A \wedge B \Leftrightarrow B \wedge A$ und $A \vee B \Leftrightarrow B \vee A$
+	\item Assoziativität: $(A \wedge B) \wedge C \Leftrightarrow A \wedge (B \wedge C)$ und $(A \vee B) \vee C \Leftrightarrow A \vee (B \vee C)$
+	\item Distributivität: $A \wedge (B \vee C) \Leftrightarrow (A \wedge B) \vee (A \wedge C)$ und $A \vee (B \wedge C) \Leftrightarrow (A \vee B) \wedge (A \vee C)$
+	\item DeMorgan: \( \neg (A \wedge B) \Leftrightarrow \neg A \vee \neg B\) und \(\neg (A \vee B) \Leftrightarrow \neg A \wedge \neg B \)
+	\end{enumerate}
+
 
 \section{Quantoren}
 \begin{longtable}{|p{0.2\textwidth}|p{0.8\textwidth}|}

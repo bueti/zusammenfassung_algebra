@@ -104,7 +104,7 @@ Surjektivität oder \textbf{Rechtstotalität} bedeutet, dass jedes
 
 \subsection{Bijektiv}
 Eine Funktion ist bijektiv (oder \emph{umkehrbar eindeutig auf} oder
-    \emph{eineindeutig auf})), wenn sie sowohl injektiv (kein Wert der
+    \emph{eineindeutig auf}), wenn sie sowohl injektiv (kein Wert der
     Zielmenge wird mehrfach angenommen) als auch surjektiv (jeder Wert der
     Zielmenge wird angenommen) ist. Insgesamt heißt das, es findet eine
     vollständige Paarbildung zwischen den Elementen von Definitionsmenge
@@ -119,3 +119,13 @@ Eine Funktion ist bijektiv (oder \emph{umkehrbar eindeutig auf} oder
 \end{align*}
 \(G\circ F: x \rightarrow z\) und \(G \circ F(x):= G(F(X))\).\newline
 \((x,y) \in F = F(x)=y\).
+
+\subsection{Äquivalenzklassen}
+Ist $A$ eine Menge und $\sim$ eine Äquivalenzrelation auf $A$, dann sind folgende Aussagen äquivalent:
+\begin{enumerate}
+	\item $\sim$ ist eine Äquivalenzrelation auf $A$
+	\item Es gibt eine Funktion $F : A \rightarrow \powerset (A)$, so dass für alle $x, y \in A$ 
+	$$x \sim y \Leftrightarrow F(x) = F(y)$$
+	gilt.
+\end{enumerate}
+Ist $F$ eine Funktion wie in 2., dann ist das eine Äquivalenzklasse von $\sim$. Schüler, die alle in der gleichen Reihe sitzen, haben als ihre Äquivalenzklasse diese Reihe.
