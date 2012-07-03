@@ -86,13 +86,34 @@ Gilt zusätzlich zur \emph{Halbordnung} noch für alle \(a,b \in A\)
       \item Image: B, y, Im(...), Bild, Zielmenge, Wertebereich
     \end{itemize}
 
+
 \subsection{Injektiv}
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]{Bilder/injektiv}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Injektivität}
+  \vspace{-10pt}
+\end{wrapfigure}
 Injektivität oder \textbf{Linkseindeutigkeit} besagt, dass jedes
     Element der Zielmenge \textbf{höchstens} einmal als Funktionswert angenommen
-    wird. Kein Wert der Zielmenge wird mehrfach angenommen. Dabei darf die Bildmenge kleiner als die Zielmenge sein.\newline
+    wird. Kein Wert der Zielmenge wird mehrfach angenommen. Dabei darf die Domain kleiner als die Zielmenge sein.\newline
 \( \forall_{x,y} \in dom(F): (F(x) = F(y) \Rightarrow x = y) \)
+\newline
 
 \subsection{Surjektiv}
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]{Bilder/surjektiv}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Surjektivität}
+  \vspace{-10pt}
+\end{wrapfigure}
+
 Surjektivität oder \textbf{Rechtstotalität} bedeutet, dass jedes
     Element der Zielmenge mindestens einmal als Funktionswert angenommen
     wird, also mindestens ein Urbild hat. Jedes Element von Y wird
@@ -103,6 +124,15 @@ Surjektivität oder \textbf{Rechtstotalität} bedeutet, dass jedes
 \(F: X \rightarrow Y:\) jedes Element von y wird erreicht auch: \(im(F) =y\)
 
 \subsection{Bijektiv}
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]{Bilder/bijektiv}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Bijektivität}
+  \vspace{-10pt}
+\end{wrapfigure}
 Eine Funktion ist bijektiv (oder \emph{umkehrbar eindeutig auf} oder
     \emph{eineindeutig auf}), wenn sie sowohl injektiv (kein Wert der
     Zielmenge wird mehrfach angenommen) als auch surjektiv (jeder Wert der
@@ -128,4 +158,13 @@ Ist $A$ eine Menge und $\sim$ eine Äquivalenzrelation auf $A$, dann sind folgen
 	$$x \sim y \Leftrightarrow F(x) = F(y)$$
 	gilt.
 \end{enumerate}
-Ist $F$ eine Funktion wie in 2., dann ist das eine Äquivalenzklasse von $\sim$. Schüler, die alle in der gleichen Reihe sitzen, haben als ihre Äquivalenzklasse diese Reihe.
+Ist $F$ eine Funktion wie in 2., dann ist das eine Äquivalenzklasse von $\sim$. 
+\begin{bsp}
+Schüler, die alle in der gleichen Reihe sitzen, haben als ihre Äquivalenzklasse diese Reihe.
+\end{bsp}
+
+\subsection{Umkehrabbildung}
+\begin{align*}
+	h(-z) &= z\\
+	h^{-1}(z) &= -z	
+\end{align*}

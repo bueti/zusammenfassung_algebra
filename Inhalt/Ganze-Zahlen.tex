@@ -7,11 +7,27 @@ Sind \(x,y \in \mathbb{Z}\) ganze Zahlen so sagen wir, dass \emph{x eine Teiler 
 \[ x | y : \Leftrightarrow \exists k \in \mathbb{Z} (y=xk)\]
 Die Teilbarkeitsrelation ist \underline{transitiv}, d. h. wenn für beliebige ganze Zahlen \(x,y,z\) folgt aus \(x|y\) und \(y|z\) stets auch \(x|z\).
 
+\begin{bsp}
+\begin{align*}
+	x \in T(0) &\Leftrightarrow x| 0\\
+	&\Leftrightarrow \exists_k \in \mathbb{Z} (kx = 0)
+\end{align*}
+Funktioniert für jedes $x$, da jedes $x$ ein Teiler von Null ist.
+\end{bsp}
+
 \textbf{Definition:} Zwei ganze Zahlen heissen \emph{teilerfremd} wenn \emph{ggT(x,y)}=1 gilt.\newline
 Seien \(x,y \in \mathbb{Z}\) teilerfremd, dann gibt es ganze Zahlen \(k, k'\) so, dass
 \[ 1 = kx + k'y \]
 gilt.
-% section teilbarkeit (end)
+
+\begin{definition}
+Sind $x,y,z \in \mathbb{Z}$, dann sind folgende Aussagen äquivalent:
+\begin{align*}
+x|y &\wedge x|z \\
+x|y &0\wedge x|(y-z)
+\end{align*}
+Beweis: Seite 44 im Skript.
+\end{definition}
 
 \section{Primzahlen} % (fold)
 \label{sec:primzahlen}
@@ -22,7 +38,7 @@ Folgende Aussagen sind für \(p \in \mathbb{N}\) äquivalent:
 	\item \(|T(p)| = 2\)
 \end{enumerate}
 Weiter gilt:\newline
-Mit Ausnahme der Zahl 2 sind alle Primzahlen p ungerade.
+Mit Ausnahme der Zahl 2 sind alle Primzahlen p ungerade und jede ganze Zahl die nicht $-1,1$ ist, wird durch eine Primzahl geteilt.
 
 \subsection{Primfaktorzerlegung} % (fold)
 \label{sub:primfaktorzerlegung}
@@ -45,18 +61,32 @@ Um die Anzahl Primfaktoren zu bestimmen wird nur die Anzahl unterschiedlicher Ba
 
 % section modulare_arihmetik (end)
 \subsection{Chinesischer Restsatz}
-Bei mehreren Gleichungen:\\
-1. Teiler bestimmen\\
-2. neue Gleichung aus der Gleichung machen\\
-3. Wieder zu 1.\\
-Beispiel:\\
+\begin{bsp}
+Gegeben:
+$$ x \equiv_4 3 \text{ ; }  x \equiv_5 2\text{ ; }	x \equiv_9 1 $$
+1. Teiler des Teilsystems bestimmen\\
 \begin{align*}
-	x \equiv_4 3\\
-	x \equiv_5 2\\
-	x \equiv_9 1\\
-	&\Rightarrow [7]_{20} \Rightarrow x \equiv_20 7\\
-	&\Rightarrow [127]_{180}
+	x &\equiv_4 3\\
+	x &\equiv_5 2\\
+	4 &= 2 \cdot 2 + 0\\
+	5 &= 1 \cdot 5 + 0\\
 \end{align*}
+somit gilt:
+\begin{align*}
+	0 &= 4 - 2 \cdot 2\\
+	&= 4 -2(5-4)
+\end{align*}
+\end{bsp}
+%2. neue Gleichung aus der Gleichung machen\\
+%3. Wieder zu 1.\\
+%Beispiel:\\
+%\begin{align*}
+%	x \equiv_4 3\\
+%	x \equiv_5 2\\
+%	x \equiv_9 1\\
+%	&\Rightarrow [7]_{20} \Rightarrow x \equiv_20 7\\
+%	&\Rightarrow [127]_{180}
+%\end{align*}
 
 Algorithmus:\\
 $$an_1 + bn_2 =1$$
